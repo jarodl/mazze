@@ -460,7 +460,7 @@
             else
             {
                 CCSprite *wall = [CCSprite spriteWithSpriteFrameName:kBoxSpriteFrameName];
-                wall.position = ccp((x * cellWidth) + cellWidth / 2, (y * cellWidth) + cellWidth / 2);
+                wall.position = ccp(round((x * cellWidth) + cellWidth / 2), round((y * cellWidth) + cellWidth / 2));
                 wall.color = kMapColor;
                 [self addChild:wall];
             }
@@ -498,7 +498,7 @@
             else
             {
                 CCSprite *wall = [CCSprite spriteWithSpriteFrameName:kBoxSpriteFrameName];
-                wall.position = ccp((x * cellWidth) + cellWidth / 2, (y * cellWidth) + cellWidth / 2);
+                wall.position = ccp(round((x * cellWidth) + cellWidth / 2), round((y * cellWidth) + cellWidth / 2));
                 wall.color = kSecondMapColor;
                 if ([map member:[NSValue valueWithCGPoint:ccp((float)x, (float)y)]])
                     wall.opacity = 150.0f;
