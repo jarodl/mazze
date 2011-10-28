@@ -12,7 +12,7 @@
 #import "Box2DNode.h"
 
 #define kObjectsSpriteSheetName @"Objects"
-#define kBackgroundColor ccc4(254,253,230, 255)
+#define kBackgroundColor ccc4(255,244,217, 255)
 #define PTM_RATIO 50.0f
 #define kWorldGravity 10.0f
 #define kNumberOfRows 12
@@ -20,9 +20,10 @@
 #define kBoxSpriteFrameName @"box.png"
 #define kStarSpriteFrameName @"star.png"
 #define kPlayerColor ccc3(156,177,179)
-#define kMapColor ccc3(247,136,146)
-#define kSecondMapColor ccc3(146,63,92)
+#define kMapColor ccc3(247,214,136)
+#define kSecondMapColor ccc3(146,63,63)
 #define kFadeColor ccc4(156,177,179, 255)
+#define kStarColor ccc3(247,136,146)
 
 @interface GameScene ()
 @property (nonatomic, assign) CGPoint startPosition;
@@ -74,6 +75,7 @@
         self.fadeLayer = [CCLayerColor layerWithColor:kFadeColor];
         self.fadeLayer.contentSize = self.contentSize;
         self.star = [CCSprite spriteWithSpriteFrameName:kStarSpriteFrameName];
+        self.star.color = kStarColor;
         self.star.visible = NO;
         star.position = ccp(fadeLayer.contentSize.width / 2, fadeLayer.contentSize.height / 1.5);
         [fadeLayer addChild:star];
@@ -221,6 +223,11 @@
         self.startPosition = ccp(2, 11);
         self.secondStartPosition = ccp(5, 11);
         self.goalPosition = ccp(3, 0);
+        CCSprite *goalStar = [CCSprite spriteWithSpriteFrameName:kStarSpriteFrameName];
+        goalStar.position = [self gridToWorld:goalPosition];
+        goalStar.color = kStarColor;
+        goalStar.scale = 0.25f;
+        [self addChild:goalStar z:4];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
     }
     
@@ -234,6 +241,7 @@
     if ((int)round(p1.x) == (int)goalPosition.x && (int)round(p1.y) == (int)goalPosition.y &&
         (int)round(p2.x) == (int)goalPosition.x && (int)round(p2.y) == (int)goalPosition.y)
     {
+        [TestFlight passCheckpoint:@"Reached the end of the maze"];
         [self unscheduleAllSelectors];
         [self.fadeLayer runAction:[CCSequence actions:
                                    [CCFadeIn actionWithDuration:0.5f],
@@ -275,6 +283,7 @@
 
 - (void)orientationChanged:(NSNotification *)notification
 {
+    [TestFlight passCheckpoint:@"Tilted the device"];
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
     switch (orientation)
     {
