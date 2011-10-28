@@ -4,10 +4,10 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>background.png</key>
+            <key>box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{20,110},{40,40}}</string>
+                <string>{{20,190},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -17,18 +17,18 @@
                 <key>sourceSize</key>
                 <string>{40,40}</string>
             </dict>
-            <key>player.png</key>
+            <key>star.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{20,20},{80,80}}</string>
+                <string>{{20,20},{160,160}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{80,80}}</string>
+                <string>{{0,0},{160,160}}</string>
                 <key>sourceSize</key>
-                <string>{80,80}</string>
+                <string>{160,160}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -36,9 +36,9 @@
             <key>format</key>
             <integer>2</integer>
             <key>size</key>
-            <string>{128,256}</string>
+            <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:592e068a5e4ab3c9df47dd05521a8a60$</string>
+            <string>$TexturePacker:SmartUpdate:e0e9d0b24d443723a32195956d0fc535$</string>
             <key>textureFileName</key>
             <string>Objects.pvr.ccz</string>
         </dict>

@@ -12,9 +12,12 @@
 @interface GameScene : CCScene
 {
     b2World *world;
+    b2World *secondWorld;
     GLESDebugDraw *m_debugDraw;
     b2MouseJoint *mouseJoint;
     b2Body *groundBody;
+    b2Body *playerOneBody;
+    b2Body *playerTwoBody;
 }
 
 @end
