@@ -13,6 +13,7 @@
 		7A3CA89D1452651100B2DF6F /* CCMoveHorizVert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3CA89C1452651100B2DF6F /* CCMoveHorizVert.m */; };
 		7A3FB8F0145293BB00334AA3 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FB8ED145293BA00334AA3 /* libcocos2d.a */; };
 		7A3FB8F1145293BB00334AA3 /* libCocosDenshion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3FB8EE145293BA00334AA3 /* libCocosDenshion.a */; };
+		7A4204CD145FB3260037BFD1 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A4204CC145FB3260037BFD1 /* Level1.json */; };
 		7A4DBAAE14491E9700741C3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4DBAAD14491E9700741C3E /* QuartzCore.framework */; };
 		7A4DBAB014491E9700741C3E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4DBAAF14491E9700741C3E /* OpenGLES.framework */; };
 		7A4DBAB214491E9700741C3E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4DBAB114491E9700741C3E /* OpenAL.framework */; };
@@ -72,6 +73,7 @@
 		7A3FB864145288A600334AA3 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		7A3FB8ED145293BA00334AA3 /* libcocos2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcocos2d.a; path = "../../../Library/Developer/Xcode/DerivedData/cocos2d-dpktuvhlgfynurdgfqievqrqktco/Build/Products/Debug/libcocos2d.a"; sourceTree = "<group>"; };
 		7A3FB8EE145293BA00334AA3 /* libCocosDenshion.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocosDenshion.a; path = "../../../Library/Developer/Xcode/DerivedData/cocos2d-dpktuvhlgfynurdgfqievqrqktco/Build/Products/Debug/libCocosDenshion.a"; sourceTree = "<group>"; };
+		7A4204CC145FB3260037BFD1 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Level1.json; path = Levels/Level1.json; sourceTree = "<group>"; };
 		7A4DBAA914491E9700741C3E /* mazze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mazze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4DBAAD14491E9700741C3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7A4DBAAF14491E9700741C3E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -187,6 +189,7 @@
 		7A32C8D1144F192400FD2C94 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				7A4204CA145FB3070037BFD1 /* Levels */,
 				7A32C8D2144F192400FD2C94 /* Spritesheets */,
 			);
 			path = Generated;
@@ -212,6 +215,14 @@
 				7A3CA89C1452651100B2DF6F /* CCMoveHorizVert.m */,
 			);
 			name = "Cocos2D Extras";
+			sourceTree = "<group>";
+		};
+		7A4204CA145FB3070037BFD1 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				7A4204CC145FB3260037BFD1 /* Level1.json */,
+			);
+			name = Levels;
 			sourceTree = "<group>";
 		};
 		7A4DBA9E14491E9600741C3E = {
@@ -498,6 +509,7 @@
 				7AA2BA8E1452A06F00B3059D /* Objects-hd.pvr.ccz in Resources */,
 				7AA2BA8F1452A06F00B3059D /* Objects.plist in Resources */,
 				7AA2BA901452A06F00B3059D /* Objects.pvr.ccz in Resources */,
+				7A4204CD145FB3260037BFD1 /* Level1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
